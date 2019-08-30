@@ -3,5 +3,6 @@
 export(constructQuery)
 export(cosmosAuth)
 export(cosmosQuery)
+export(cosmosQueryAll)
 export(genHeader)
 export(readContent)

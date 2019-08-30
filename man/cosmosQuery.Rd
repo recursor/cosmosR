@@ -4,13 +4,18 @@
 \alias{cosmosQuery}
 \title{POST a full query to the REST API for Cosmos DB.}
 \usage{
-cosmosQuery(sql.what = "*", sql.where = "", debug.auth = FALSE,
-  debug.query = FALSE, content.response = FALSE)
+cosmosQuery(sql.what = "*", sql.where = "", max.items = 100,
+  continuation = FALSE, debug.auth = FALSE, debug.query = FALSE,
+  content.response = TRUE)
 }
 \arguments{
 \item{sql.what}{String for specifying what fields to retrieve. Typically called select condition. Defaults to *}
 
 \item{sql.where}{String for specifying what filter to use on data. Typically called search condition. Defaults to empty.}
+
+\item{max.items}{Number of documents to retrieve per page}
+
+\item{continuation}{Logical specifying whether to try to grab a next page of results}
 
 \item{debug.auth}{Logical value for getting verbose output of auth header being constructed. Defaults to false.}
 
